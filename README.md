@@ -37,3 +37,11 @@ Mappit is a map from OpenStreetMap data created with python packages
 installed the packages specified in the "requirements.txt"
     
       ```pip install -r requirements.txt```
+
+
+6. created a new folder "mappit" in the Mappit directory and added some packages geo.py,osm.py, plotting.py, settings.py file..
+
+    ```../streamlit-mappit/app.py
+         ../streamlit-mappit/utils.py```
+
+     

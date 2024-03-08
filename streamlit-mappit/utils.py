@@ -11,9 +11,9 @@ import streamlit as st
 from geopandas import GeoDataFrame
 from shapely.geometry import Polygon
 
-from prettymapp.plotting import Plot
-from prettymapp.osm import get_osm_geometries
-from prettymapp.settings import STYLES
+from mappit.plotting import Plot
+from mappit.osm import get_osm_geometries
+from mappit.settings import STYLES
 
 
 @st.cache_data(show_spinner=False, hash_funcs={Polygon: lambda x: json.dumps(x.__geo_interface__)})

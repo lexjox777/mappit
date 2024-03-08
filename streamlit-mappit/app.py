@@ -1,6 +1,5 @@
 import copy
 import json
-
 import streamlit as st
 from streamlit_image_select import image_select
 
@@ -10,15 +9,15 @@ from utils import (
     get_colors_from_style,
     gdf_to_bytesio_geojson,
 )
-from prettymapp.geo import GeoCodingError, get_aoi
-from prettymapp.settings import STYLES
+from mappit.geo import GeoCodingError, get_aoi
+from mappit.settings import STYLES
 
 st.set_page_config(
-    page_title="prettymapp", page_icon="🖼️", initial_sidebar_state="collapsed"
+    page_title="mappit", page_icon="🖼️", initial_sidebar_state="collapsed"
 )
-st.markdown("# Prettymapp")
+st.markdown("# Mappit")
 
-with open("./streamlit-prettymapp/examples.json", "r") as f:
+with open("./streamlit-mappit/examples.json", "r") as f:
     EXAMPLES = json.load(f)
 
 if not st.session_state:
@@ -30,7 +29,7 @@ if not st.session_state:
     st.session_state["previous_style"] = "Peach"
     st.session_state["previous_example_index"] = 0
 
-example_image_pattern = "streamlit-prettymapp/example_prints/{}_small.png"
+example_image_pattern = "streamlit-mappit/example_prints/{}_small.png"
 example_image_fp = [
     example_image_pattern.format(name.lower()) for name in list(EXAMPLES.keys())[:4]
 ]
@@ -224,10 +223,10 @@ with ex2.expander("Export map configuration"):
 
 st.markdown("---")
 st.write(
-    "Share on social media with the hashtag [#prettymaps](https://twitter.com/search?q=%23prettymaps&src=typed_query) !"
+    # "Share on social media with the hashtag [#prettymaps](https://twitter.com/search?q=%23prettymaps&src=typed_query) !"
 )
 st.markdown(
-    "More infos and :star: at [github.com/chrieke/prettymapp](https://github.com/chrieke/prettymapp)"
+    "More infos and :star: at [github.com/lexjox777/mappit](https://github.com/lexjox777/mappit)"
 )
 
 st.session_state["previous_style"] = style
