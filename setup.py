@@ -6,7 +6,7 @@ parent_dir = Path(__file__).resolve().parent
 setup(
     name="mappit",
     version="0.2.0",
-    author="Ola",
+    author="Tayo",
     author_email="lexjox777@gmail.com",
     description="",
     long_description=parent_dir.joinpath("README.md").read_text(encoding="utf-8"),
@@ -32,5 +32,5 @@ setup(
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.10",
 )
